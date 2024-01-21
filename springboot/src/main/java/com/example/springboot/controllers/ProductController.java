@@ -66,7 +66,7 @@ public class ProductController {
 
     @Operation(
             summary = "Read all Products in database.",
-            description = "Reads all products. The response is all Products objects with their id, name and value.",
+            description = "Reads all products. You can filter by pages using ?page=x&size=y. The response is all Products objects with their id, name and value.",
             tags = { "products", "getall" })
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = ProductController.class), mediaType = "application/json") }),
