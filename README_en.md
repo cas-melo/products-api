@@ -1,6 +1,6 @@
 # RESTful API - Online Products Store
 
-This RESTful API allows performing CRUD (Create, Read, Update, Delete) operations on a database associated with an online products store. The API is built using the Spring Framework, Swagger for documentation, and PostgreSQL for the database.
+This RESTful API allows performing CRUD (Create, Read, Update, Delete) operations on a database associated with an online products store. The API was built using the Spring Framework, Spring Security and JWT Tokens for authorization and authentication, Swagger for documentation, and PostgreSQL for the database.
 
 ## Key Features
 
@@ -47,6 +47,13 @@ Authentication is performed through a Bearer Token generated during the login pr
 - **Endpoint:** `/auth/login`
 - **Method:** POST
 - **Description:** Performs login and returns a valid Bearer Token.
+
+```json
+{
+  "login": "your_login",
+  "password": "your_password"
+}
+```
 
 #### Registration Endpoint:
 

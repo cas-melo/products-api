@@ -1,6 +1,6 @@
 # API RESTful - Loja Virtual de Produtos
 
-Esta API RESTful permite realizar operações CRUD (Create, Read, Update, Delete) em um banco de dados associado a uma loja virtual de produtos. A API é construída utilizando Spring Framework, Swagger para documentação e PostgreSQL para o banco de dados. [(Documentation in english here.)](README_en.md)
+Esta API RESTful permite realizar operações CRUD (Create, Read, Update, Delete) em um banco de dados associado a uma loja virtual de produtos. A API foi construída utilizando Spring Framework, Spring Security e JWT Tokens para autenticação e autorização, Swagger para documentação e PostgreSQL para o banco de dados. [(Documentation in english here.)](README_en.md)
 
 ## Recursos Principais
 
@@ -48,6 +48,12 @@ A autenticação é realizada através de um Bearer Token, gerado durante o proc
 - **Endpoint:** `/auth/login`
 - **Método:** POST
 - **Descrição:** Realiza o login e retorna um Bearer Token válido.
+```json
+{
+  "login": "seu_login",
+  "password": "sua_senha"
+}
+```
 
 #### Endpoint de Registro:
 
