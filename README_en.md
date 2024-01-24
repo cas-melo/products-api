@@ -29,6 +29,40 @@ This RESTful API allows performing CRUD (Create, Read, Update, Delete) operation
     - Method: DELETE
     - Description: Removes a specific product from the store based on the provided ID.
 
+## Authentication and Authorization
+
+The API now has an authentication and authorization system using Spring Security and JWT Token. There are two roles: Admin and User.
+
+### Roles
+
+- **Admin:** Has permissions to add, update, and delete products.
+- **User:** Can only perform read operations on products.
+
+### Authentication
+
+Authentication is performed through a Bearer Token generated during the login process. To obtain the token, make a login request with the appropriate credentials.
+
+#### Login Endpoint:
+
+- **Endpoint:** `/auth/login`
+- **Method:** POST
+- **Description:** Performs login and returns a valid Bearer Token.
+
+#### Registration Endpoint:
+
+- **Endpoint:** `/auth/register`
+- **Method:** POST
+- **Description:** Registers the user in the database.
+- Example JSON request:
+
+```json
+{
+  "login": "your_login",
+  "password": "your_password",
+  "roles": ["USER/ADMIN"]
+}
+```
+
 ## How to Use
 
 1. **Installation:**
